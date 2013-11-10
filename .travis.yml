@@ -4,4 +4,6 @@ rvm:
 - 1.9.3
 env:
   global:
-    secure: OCXstuTc+Mlc8y1Bcp4kyROBhISqfdewcZOXH7yKCABdsXdsmizOSywCxMQis9rmkyit6oC5LTeG6bPz8fM8VRYE5OEJJ+Ujawc4ldcMxX1RHCRuPPvMKs6oGOPrxSij/u4z1GGX9rFrJV1GfRO+nNFUwjkoW+mC9viLc1DZUvE=
+  - secure: oqsldFSn/mncyjQG6zgdeAJcKx54WeZVXmIl2sZ+GB+BVmzzT9l0jhs3vAfEp2Q66n0iVMsjyT86VOw4oZGKjuldMpZsop3IHOHrhgRYhp3le7eYzip2+ZIPN189Vpqj0E/GLiZDCOylVvrq3OZ4f/6MqGvGFoMHRnEE/BmwP4Y=
+notifications:
+  email: false
