@@ -9,6 +9,7 @@ module RSpecApi
         def expect_status(response, expectations = {})
           context 'responds with a status code that' do
             extend Code
+
             expect_status_code response, expectations
           end if expectations.any?
         end

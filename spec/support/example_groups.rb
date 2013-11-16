@@ -15,13 +15,17 @@ RSpec::Matchers.define :pass do
   end
 end
 
-def examples_expecting(expectations = {})
+def examples_expecting(expectations = {}, request_params = nil, &block)
   RSpec::Core::ExampleGroup.describe 'An RSpecApi group example' do
     extend RSpecApi::Expectations
     response = OpenStruct.new status: 200,
       headers: {'Content-Type' => 'application/json; charset=utf-8',
                 'Link' => '<https://example.com/1>; rel="prev"'},
       body: 'alert([{"id":1,"name":"foo"},{"id":2,"name":"foo"}])'
-    expect_response response, expectations
+    if block_given?
+      expect_response response, expectations, request_params, &block
+    else
+      expect_response response, expectations
+    end
   end
 end

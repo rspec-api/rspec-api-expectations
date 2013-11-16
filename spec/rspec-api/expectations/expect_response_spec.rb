@@ -43,4 +43,18 @@ describe 'expect_response' do
       expect(examples).not_to include_description 'responds with a body that'
     end
   end
+
+  context 'given a block' do
+    let(:examples) { examples_expecting(status: :ok) { } }
+    it 'runs expectations for the response body' do
+      expect(examples).to include_description 'matches custom expectations'
+    end
+  end
+
+  context 'given no block' do
+    let(:examples) { examples_expecting no: :blocks }
+    it 'does not run expectations for the response body' do
+      expect(examples).not_to include_description 'matches custom expectations'
+    end
+  end
 end

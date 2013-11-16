@@ -23,7 +23,11 @@ end
 #
 describe 'GET https://api.github.com/repositories', :remote, :rspec_api do
   response = GitHub.get '/repositories'
-  expect_response response, status: :ok, type: :json, collection: true,
-    attributes: {id: {type: :number}, name: {type: :string},
-                 url: {type: {string: :url}}}
+  expectations = {status: :ok, type: :json, collection: true,
+                  attributes: {id: {type: :number}, name: {type: :string}}}
+  prefix_params = nil
+  expect_response response, expectations, prefix_params do |response, params|
+    expect(response.headers['server']).to eq 'GitHub.com'
+    expect(params).to eq prefix_params
+  end
 end
