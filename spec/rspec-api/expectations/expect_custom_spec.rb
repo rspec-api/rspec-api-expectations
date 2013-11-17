@@ -29,16 +29,11 @@ describe 'expect_custom', sandboxing: true do
     end }
     it { expect(examples).to pass }
   end
-end
 
-#
-#     # Creates an example group for custom expectations passed in a block
-#     module Custom
-#       def expect_custom(response, prefix_params, &block)
-#         context 'matches custom expectations' do
-#           it { instance_exec response, prefix_params, &block }
-#         end if block_given?
-#       end
-#     end
-#   end
-# end
+  context 'provides RSpecApi::Matchers to the block' do
+    let(:examples) { examples_expecting do |response, _|
+      expect(response).to have_status :ok
+    end }
+    it { expect(examples).to pass }
+  end
+end

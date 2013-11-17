@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec-api-expectations (0.6.1)
+    rspec-api-expectations (0.6.2)
       activesupport
       faraday
       rack

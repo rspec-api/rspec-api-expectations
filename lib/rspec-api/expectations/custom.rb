@@ -5,6 +5,7 @@ module RSpecApi
       module Custom
         def expect_custom(response, prefix_params, &block)
           context 'matches custom expectations' do
+            include RSpecApi::Matchers
             it { instance_exec response, prefix_params, &block }
           end if block_given?
         end
