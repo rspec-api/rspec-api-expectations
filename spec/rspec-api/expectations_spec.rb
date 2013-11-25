@@ -6,7 +6,7 @@ describe RSpecApi::Expectations do
     should_respond_to :expect_response
   end
 
-  context 'example groups that include RSpecApi::Expectations' do
+  context 'example groups that extend RSpecApi::Expectations' do
     extend RSpecApi::Expectations
     should_respond_to :expect_response
   end

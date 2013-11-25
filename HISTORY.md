@@ -1,11 +1,7 @@
-v0.6.2  - 2013/11/16
+v0.7.0  - 2013/11/24
 --------------------
 
 * the block passed `expect_response` can use RSpecApi::Matchers, e.g. expect(response).to have_attributes
-
-v0.6.1  - 2013/11/16
---------------------
-
 * `expect_response` accepts a block where custom expectations can be run on the response and request params
 
 v0.6.0  - 2013/11/09

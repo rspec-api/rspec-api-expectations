@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'rspec'
   spec.add_dependency 'activesupport' # for Array.wrap, slice, concern, ...
-  spec.add_dependency 'rspec-api-matchers', '~> 0.6.1' # expect(200).to match_status(200)
+  spec.add_dependency 'rspec-api-matchers', '~> 0.7.0' # expect(200).to match_status(200)
   spec.add_dependency 'rack' # for ::Utils
 
   # For integration tests
