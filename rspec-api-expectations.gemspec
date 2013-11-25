@@ -18,12 +18,12 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^spec/})
   spec.require_paths = ['lib']
 
-  spec.required_ruby_version = '>= 1.9.3'
+  spec.required_ruby_version = '>= 1.9.2'
   spec.required_rubygems_version = ">= 1.3.6"
 
   spec.add_dependency 'rspec'
   spec.add_dependency 'activesupport' # for Array.wrap, slice, concern, ...
-  spec.add_dependency 'rspec-api-matchers', '~> 0.7.0' # expect(200).to match_status(200)
+  spec.add_dependency 'rspec-api-matchers', '~> 0.7.1' # expect(200).to match_status(200)
   spec.add_dependency 'rack' # for ::Utils
 
   # For integration tests

@@ -55,7 +55,7 @@ Note that, in order run the example, above, you need to get a GitHub Personal Ac
 * Browse to your [GitHub settings](https://github.com/settings/applications)
 * Click on 'Create new token' under 'Personal Access Token' (name it as you want)
 * Copy the generated token and store it on your machine as the environment variable called `RSPEC_API_GITHUB_TOKEN`:
-  * On OSX and bash, accomplish this by running the command `export RSPEC_API_GITHUB_TOKEN=` followed by your pasted key (no spaces after `=`)
+* On OSX and bash, accomplish this by running the command `export RSPEC_API_GITHUB_TOKEN=` followed by your pasted key (no spaces after `=`)
 
 
 Available expectations
